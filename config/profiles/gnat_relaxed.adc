@@ -1,0 +1,8 @@
+-- Relaxed profile for telnet server
+-- Based on Jorvik but allows task entries
+pragma Profile (Jorvik);
+pragma Partition_Elaboration_Policy (Sequential);
+pragma Assertion_Policy (Check);
+
+-- Override the task entry restriction
+pragma Restrictions (Max_Task_Entries => 1);
