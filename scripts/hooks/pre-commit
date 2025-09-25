@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+echo "[pre-commit] Selecting profile: ${PROFILE:-Jorvik}"
+make profile PROFILE="${PROFILE:-Jorvik}"
+echo "[pre-commit] Running GNATprove (mode=all, level=2)..."
+gnatprove -P server_starter.gpr --mode=all --level=2 -j0 --report=all

@@ -1,0 +1,9 @@
+# build
+obj/
+bin/
+# gnatprove artifacts
+gnatprove/
+gnatprove.out
+gnatprove/*.json
+# config
+gnat.adc
